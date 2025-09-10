@@ -6,8 +6,72 @@
 </head>
 <body>
 <script>
-  /* write your code below this line  🙂 */
+"use strict"; 
+// Spørsmål 1
+const age=22;
+//const age2; 
+let x=5;
+let navn;
+/* Kommandoen "let" Må ikke ha en fastsatt verdi i motsetning til "const"*/
+/* const er for konstanter, mens let er for variabler. Når const age2; står uten verdi får vi opp feilmeldingen: 
+""const" declarations must be initialized". Når vi skriver "let navn;" skjer ingenting.
+Dette er fordi const brukes for verdier som ikke skal endres og da må vi allerede vite denne verdien.
+"let" brukes for variabler som kan endres. Med "let" har vi mulighet til å gi en verdi senere */
 
+//Spørsmål 2
+// Man kan skrive ulike variabler på samme linje, og ulike konstanrter på samme. 
+let a=1, b=2, c=3; //Dette er en måte
+const d=4; const e=5; const f=6; //Dette er en annen måte
+
+const z=80; let y=90; /*Dette er en tredje måte. Når man vil skrive const og let på samme
+linje er det viktig å avslutte hver kommando med semikolon ";"*/
+
+// FEIL:  let prize_1=100, const prize_2=200; 
+/* Denne måten er feil for da leses ikke "const" som en 
+egen kommando, men som en del av variabel-kommandoen. Da får vi feilmeldingen:
+""cons" is not allowed as a variable decleration name"*/
+
+//Spørsmål 3
+const firstName="Ola"; const lastName="Nordmann";
+const firstName="Henrik"; /* Dette er feil fordi vi har allerede deklarert 
+"firstname" som ola. Vi får feilmeldingen: "Identifier 'firstName' has already been declared"
+En konstant kan ikke endre verdi og vi kan dermed ikke endre "firstName" fra Ola til Henrik. 
+Men man kann endre variablene i et const object eller array.*/
+
+const person={Name:"Lea", Age:22, Country:"Norway"};
+// Konstanten er "person" og kan ikke endres, men alt inni objektet kan endres.
+person.Name="Hans"; // Nå har vi endret navnet inni objektet
+person.Language="Norwegian"; // Nå har det blitt lagt til en ny egenskap i objektet
+
+person={ 
+Name:"Guro",
+Age:30,
+Country:"Sweden"
+};
+/*Dette blir feil får nå prøver vi igjen å endre på selve "const person" og ikke bare det 
+som er i objektet. Feilmeldingen man får da er: "TypeError: Assignment to constant variable".
+Jeg kunne drimot kalt den ene konstanten "const person_1" og det 
+andre "const person_2" for da blir det to helt forskjellige objekter. */
+
+// Spørsmål 4
+Pi=3.14159;
+/*Når jeg lager Pi som variabel uten const eller let får jeg ingen feilmeldinger når jeg 
+sjekker browseren med "inspiser" vinduet. Etter å ha aktivert "use strict"; får jeg 
+feilmeldingen: "Uncaught ReferenceError: Pi is not defined at task_2-1.html:26:1" 
+Man kan ikke bruke udefinerte variabler i strict mode som gjør at man blir tvunget til 
+å følge rett syntax*/
+
+// Spørsmål 5
+const value=8;
+value=11;
+/*Når jeg prøver å gi konstanten "value" en ny verdi får jeg feilmeldingen: 
+"TypeError: Assignment to constant variable." Her har jeg brukt både en eksplisitt og 
+implisitt deklarasjon. "const value=8" er en ekplisitt deklarasjon. Jeg forteller JavaScript
+at jeg "eksplisitt" vil lage en ny variabel. Når jeg skriver "value=11" uten en kommando
+prøver jeg å endre verdien implisitt. Det samme gjelder Pi i spørsmål 4. Det er også en 
+implisitt variabel fordi den ikke har en kommando. Da lager JavaScript variabelen automatisk
+som en global variabel. Dette kan komme i konflikt med andre variabler som det gjorde med 
+"const value" og bare "value" En udeklarert variabel vil ikke fungere med "use strict". */
 </script>
 </body>
 </html>
