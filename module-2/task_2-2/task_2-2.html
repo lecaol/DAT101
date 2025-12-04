@@ -12,7 +12,24 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[Replace this with you answer]
+				[Man bør bruke konstanter for verdier som man ikke ønsker skal endres i løpet av programmet. 
+        Et eksempel på en konstant kan være "const x=5;" hvor x alltid skal være 5. Eller:
+        "const meters = 30;  
+        const centimeter = meters *100;" 
+        Her er både meters og centimeter konstanter fordi de ikke skal endres.
+        Dette betyr at for eksempel:
+        "const meters = 40;
+        const meters = 50;" 
+        blir feil fordi man ikke kan endre verdien til en konstant.
+        I motsetning brukes variabler når man vil endre en verdi i løpet av programmet. 
+        Et eksempel på en variabel er:
+        "let x=5;
+        x=8;" 
+        hvor verdien for x endres fra 5 til 8. Du kan gjenbruke variabelnavn og endre verdien.
+        https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/ 
+        Alle kan ikke være konstanter fordi noen verdier må kunne endres i løpet av programmet, et eksempel hvor man må
+        bruke let er i en løkke hvor man ønsker å endre verdien for hver iterasjon.
+        ]
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>

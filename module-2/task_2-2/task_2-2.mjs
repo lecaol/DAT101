@@ -15,9 +15,9 @@ printOut("--- Part 2 -----------------------------------------------------------
 const meters = 25;
 const cm = 34;
 const mm = 25.4; 
-let OneInch = mm;
-let TotalCm = (meters * 100) + cm;
-let TotalInches = (TotalCm * 10) / OneInch;
+const OneInch = mm;
+const TotalCm = (meters * 100) + cm;
+const TotalInches = (TotalCm * 10) / OneInch;
 printOut("25 meter og 34 cm er tilsvarende" + TotalInches.toFixed(2) + " inches");
 printOut(newLine);
 
