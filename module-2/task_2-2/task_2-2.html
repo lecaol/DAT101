@@ -33,15 +33,32 @@
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
+				[Paranteser påvirker rekkefølgen til hvordan et uttrykk skal utføres/utregnes. JavaScript 
+        følger regelen PEMDAS for å bestemme rekkefølgen til operasjoner i et uttrykk.
+        PEMDAS står for Parentheses, Exponents, Multiplication and Division, Addition and Subtraction.
+        Dette betyr at operasjoner i paranteser utføres først. Deretter utføres de andre operasjonene etter rekkefølgelen.
+        Parantesene er viktige for når man vil utregne et uttrykk i en annen rekkefølge enn slik JavaScript
+        ville automatisk gjort det. Chatgpt ]
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
+				[Vi kan limitere antall desimaler i et flyttall ved å bruke metoden toFixed(). 
+        Denne funksjonen konverterer et nummer til en streng og returnerer strengen med et spesifisert antall desimaler.
+        Et eksempel er 
+        let sum = 56.7238;
+        let limitedSum = sum.toFixed(2);
+        Dette gir oss tallet 56.72 som en streng med to desimaler.
+        https://www.w3schools.com/jsref/jsref_tofixed.asp]
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				[Replace this with you answer]
+				[For å sammenligne flyttall kan man bruke "===" operatoren. Den kalles "strict equality using" 
+        og sjekker både verdi og datatype. Trippel likhetstegn (===) returnerer true hvis begge verdier er like og av samme type,
+        ellers returnerer den false. 
+        Et eksempel er: 
+        12.199999 === 12.2 
+        Dette vil returnere false fordi verdiene ikke er like. 
+        ]
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
