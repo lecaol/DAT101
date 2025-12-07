@@ -27,7 +27,7 @@ printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
+/* Put your code below here!*/     
 printOut("Replace this with you answer!");
 printOut(newLine);
 
