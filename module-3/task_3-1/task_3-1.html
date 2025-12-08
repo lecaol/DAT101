@@ -11,9 +11,20 @@
     </div>
     <ol>
       <li>Discuss the behavior of part 1, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>[Jeg har skrevet "let wakeUpIme = 7" og "printOut("Wake up time is: " + wakeUpTime);"
+        Resten av koden er skrevet slik:
+        if (wakeUpTime == 7) {
+          printOut("I can catch the bus to school.");
+        } Detter betyr at programmet sjekker om "wakeUpTime" er lik 7. Om dette stemmer skal teksten "I can catch the bus to school." komme.
+        Om jeg setter let wakeUpTime = 7 får man opp teksten "I can catch the bus to school.". Om jeg setter let wakeUpTime = 6 for eksempel, vil ikke teksten dukke opp.
+        Ingenting annet enn "gjør dette om dette er sant" er spesifisert i koden. Derfor skjer det ingenting om jeg setter wakeUpTime til noe annet enn 7]</p>
       <li>Same as question #1. How ever the answer should now be different. Discuss the behavior of part 2, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>[For oppgave 2 har jeg lagt til en else statement:
+          else {
+          printOut("I have to take the car to school");
+          } denne delen forteller hva programmet skal gjøre når betingelsen gir false. I dette tilfellet skal teksten "I have to take the car to school." vises
+          om wakeUpTime er hvilket som helst annet tall enn 7. Om jeg setter let wakeUpTime = 7 vises "I can catch the bus to school."
+          Men hvis jeg setter let wakeUpTime = 6 eller for eksempel 8 vises teksten "I have to take the car to school." ]</p>
       <li>Discuss the behavior of part 3, what happens when wake time is less than 7 or greater than 8?</li>
       <p>[Replace this with you answer]</p>
       <li>Discuss the behavior for part 4, what happens if the number is exactly 0, is zero positive or negative?</li>

@@ -4,9 +4,12 @@ import { printOut, newLine } from "../../common/script/utils.mjs";
 printOut("--- Part 1, 2, 3 ----------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 printOut("Task 1, 2 and 3");
-let wakeUpTime = 2;
-if ("Replace this") {
-  printOut("I can take the bus to school.");
+let wakeUpTime = 8;
+printOut("Wake up time is: " + wakeUpTime);
+if (wakeUpTime == 7) {
+  printOut("I can catch the bus to school.");
+} else {
+  printOut("I have to take the car to school");
 }
 printOut(newLine);
 
