@@ -11,23 +11,47 @@
     </div>
     <ol>
       <li>Discuss the behavior of part 1, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Jeg har skrevet "let wakeUpIme = 7" og "printOut("Wake up time is: " + wakeUpTime);"
-        Resten av koden er skrevet slik:
-        if (wakeUpTime == 7) {
-          printOut("I can catch the bus to school.");
+      <p>[Jeg har skrevet "let wakeUpIme = 7" og "printOut("Wake up time is: " + wakeUpTime);"<br>
+        Resten av koden er skrevet slik: <br>
+        if (wakeUpTime == 7) { <br>
+          printOut("I can catch the bus to school."); <br>
         } Detter betyr at programmet sjekker om "wakeUpTime" er lik 7. Om dette stemmer skal teksten "I can catch the bus to school." komme.
         Om jeg setter let wakeUpTime = 7 får man opp teksten "I can catch the bus to school.". Om jeg setter let wakeUpTime = 6 for eksempel, vil ikke teksten dukke opp.
         Ingenting annet enn "gjør dette om dette er sant" er spesifisert i koden. Derfor skjer det ingenting om jeg setter wakeUpTime til noe annet enn 7]</p>
       <li>Same as question #1. How ever the answer should now be different. Discuss the behavior of part 2, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[For oppgave 2 har jeg lagt til en else statement:
-          else {
-          printOut("I have to take the car to school");
+      <p>[For oppgave 2 har jeg lagt til en else statement:<br>
+          else { <br>
+          printOut("I have to take the car to school"); <br>
           } denne delen forteller hva programmet skal gjøre når betingelsen gir false. I dette tilfellet skal teksten "I have to take the car to school." vises
           om wakeUpTime er hvilket som helst annet tall enn 7. Om jeg setter let wakeUpTime = 7 vises "I can catch the bus to school."
           Men hvis jeg setter let wakeUpTime = 6 eller for eksempel 8 vises teksten "I have to take the car to school." ]</p>
       <li>Discuss the behavior of part 3, what happens when wake time is less than 7 or greater than 8?</li>
-      <p>[Replace this with you answer]</p>
+      <p> For oppgave 3 la jeg til en else if statement mellom "if" og "else" fra de tidligere oppgavene. Koden for else if ser slik ut:<br>
+        else if (wakeUpTime == 8) { <br>
+          printOut("I can take the train to school."); <br>
+        } <br>
+        Denne delen av koden gir en ny betingelse som skal sjekkes. Her bes programmet om å sjekke om wakeUpTime = 8. Om dette stemmer skal
+        teksten "I can take the train to school." vises. Hele koden sier "hvis wakeUpTime = 7, vis "I can catch the bus to school.""
+        Hvis wakeUpTime = 8, vis "I can take the train to school." Hvis wakeUpTime er hvilket som helst annet tall, vis "I have to take the car to school."
+        Når wakeUpTime er mindre enn syv eller større enn 8 vil teksten "I have to take the car to school." printes ut fordi ingen av de to første betingelsene er sanne.
+      </p>
       <li>Discuss the behavior for part 4, what happens if the number is exactly 0, is zero positive or negative?</li>
+      <p>For oppgave 4 har jeg brukt 2 "if" statements i stedet for else. Dette var fordi jeg ikke ville definere hva som skal skje om utsagnet er false slik at jeg kunne
+        sjekke hva som skjer når tallet er 0. Koden ser slik ut: <br>
+        let integer = 0; <br>
+
+        if (integer > 0) { <br>
+          printOut(" The number = " + integer); <br>
+          printOut(" The value is positive"); <br>
+        } <br>
+        if (integer &lt; 0) { <br>
+          printOut(" The number = " + integer); <br>
+          printOut(" The value is negative"); <br>
+        } <br>
+        Denne koden sjekker om integer er større enn 0 og skriver ut "The value is negative" om dette er sant. Videre sjekker den om
+        integer er mindre enn 0 og skriver ut "The vlaue is negative" om dette er sant. Det er ingen betingelser for når integer = 0.
+        Om man skriver let integer = 0 skjer ingenting fordi ingen av betingelsene er sanne. 0 er verken positivt eller negativt.
+      </p>
     </ol>
     <script type="module" src="./task_3-1.mjs" defer></script>
   </body>
