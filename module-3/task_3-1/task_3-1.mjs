@@ -105,5 +105,26 @@ printOut(newLine);
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+switch (monthName) {
+  case "January":
+  case "February":
+  case "June":
+  case "July":
+  case "August":
+  case "September":
+  case "October":
+  case "November":
+  case "December":
+    printOut("The Art gallery is open in " + monthName + ", Welcome!");
+    break;
+  case "March":
+  case "May":
+    printOut("The Art Gallery is closed in " + monthName);
+    break;
+  case "April":
+    printOut("The Art Gallery is open in the building next door in " + monthName + ", Welcome!");
+    break;
+}
+
 printOut(newLine);

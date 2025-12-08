@@ -11,7 +11,7 @@
     </div>
     <ol>
       <li>Discuss the behavior of part 1, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Jeg har skrevet "let wakeUpIme = 7" og "printOut("Wake up time is: " + wakeUpTime);"<br>
+      <p>[Jeg har skrevet "const wakeUpIme = 7" og "printOut("Wake up time is: " + wakeUpTime);"<br>
         Resten av koden er skrevet slik: <br>
         if (wakeUpTime == 7) { <br>
           printOut("I can catch the bus to school."); <br>
@@ -23,7 +23,7 @@
           else { <br>
           printOut("I have to take the car to school"); <br>
           } denne delen forteller hva programmet skal gjøre når betingelsen gir false. I dette tilfellet skal teksten "I have to take the car to school." vises
-          om wakeUpTime er hvilket som helst annet tall enn 7. Om jeg setter let wakeUpTime = 7 vises "I can catch the bus to school."
+          om wakeUpTime er hvilket som helst annet tall enn 7. Om jeg setter const wakeUpTime = 7 vises "I can catch the bus to school."
           Men hvis jeg setter let wakeUpTime = 6 eller for eksempel 8 vises teksten "I have to take the car to school." ]</p>
       <li>Discuss the behavior of part 3, what happens when wake time is less than 7 or greater than 8?</li>
       <p> For oppgave 3 la jeg til en else if statement mellom "if" og "else" fra de tidligere oppgavene. Koden for else if ser slik ut:<br>
@@ -38,7 +38,7 @@
       <li>Discuss the behavior for part 4, what happens if the number is exactly 0, is zero positive or negative?</li>
       <p>For oppgave 4 har jeg brukt 2 "if" statements i stedet for else. Dette var fordi jeg ikke ville definere hva som skal skje om utsagnet er false slik at jeg kunne
         sjekke hva som skjer når tallet er 0. Koden ser slik ut: <br>
-        let integer = 0; <br>
+        const integer = 0; <br>
 
         if (integer > 0) { <br>
           printOut(" The number = " + integer); <br>
