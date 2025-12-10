@@ -117,31 +117,60 @@ for (let grade = 1; grade <= 5; grade++) {
     } else if (percent >= 41) { gradeLetter = "E";
     } else { gradeLetter = "F"; }
 
-    gradePrint += "Points: " + points + ", Percent: " + percent.toFixed(2) + "%, Grade: " + gradeLetter;
+    gradePrint += "Points: " + points + ", Percent: " + percent.toFixed(2) + "%, Grade: " + gradeLetter + newLine;;
 }
 
 printOut(gradePrint);
 
-printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+// Straight
+
+let Kast = 0;
+
+while (true) {
+    Kast++;
+    const d1 = Math.floor(Math.random() * 6) + 1;
+    const d2 = Math.floor(Math.random() * 6) + 1;
+    const d3 = Math.floor(Math.random() * 6) + 1;
+    const d4 = Math.floor(Math.random() * 6) + 1;
+    const d5 = Math.floor(Math.random() * 6) + 1;
+    const d6 = Math.floor(Math.random() * 6) + 1;
+
+    const dice = [d1, d2, d3, d4, d5, d6].sort();
+    
+    if (dice.join(",") === "1,2,3,4,5,6") {
+        printOut("You rolled a straight after " + Kast + " attempts!");
+        break;
+    }
+}
+
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+
+// 3 pairs
+
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+
+// 2 of a kind and 4 of a kind (tower)
+
 printOut("Replace this with you answer!");
 printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+
+//All the same
+
 printOut("Replace this with you answer!");
 printOut(newLine);
