@@ -136,28 +136,172 @@ printOut(newLine);
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 
+function PrisUtenMVA (Gross, VATgroup){ //funksjon for å finne pris for ulike VAT groups
 
+    let VAT;
+    VATgroup = VATgroup.toLowerCase(); //omgjør all input til parameteren "VATgroup" til all lowercase
 
-printOut("Replace this with you answer!");
+    if (VATgroup === "normal") {  //skatt ved "normal"
+        VAT = 25;
+    } else if (VATgroup === "food") { //skatt ved "food"
+        VAT = 15;
+    } else if (VATgroup === "hotel" || VATgroup === "transport" || VATgroup === "cinema") { //skatt ved "hotel", "cinema", og "transport"
+        VAT = 10;
+    } else {
+        printOut("Unknown VAT group!"); //ved ukjent VAT group
+        return NaN;
+    }
+
+    const net = (100 * Gross) / (VAT + 100); //regner ut net pris uten skatt
+    printOut(Gross + "kr is " + net.toFixed(2) + " without tax");
+    return net;
+}
+
+PrisUtenMVA(100, "NOrmal"); //testet ulike VAT grupper med store og små bokstaver
+PrisUtenMVA(300, "FOOD");
+PrisUtenMVA(750, "hoteL");
+PrisUtenMVA(500, "furniture");
+
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+function SDT (Speed, Distance, Time){
+    let ManglerVerdier = 0;  //variabel for å telle antall verdier som er undefined
+
+    if (Speed === undefined) ManglerVerdier++;
+    if (Distance === undefined) ManglerVerdier++;   //Disse tre if-ene gjør at variabelen øker med en for hver undefined
+    if (Time === undefined) ManglerVerdier++;       
+
+    let resultat;
+
+    if (ManglerVerdier > 1) {  //Er det flere enn 1 undefined så skal det returneres NaN
+        printOut("Ugyldig input, for mange mangler");
+        return NaN;
+    }
+    if (Speed === undefined){ //beregne speed
+        resultat = Distance / Time;
+        printOut("Speed = " + resultat + " km/h");
+        printOut("Distance = " + Distance + " km");
+        printOut("Time = " + Time + " h" + newLine);
+        return resultat;
+    }
+    if (Distance === undefined) { //beregne distance
+        resultat = Speed * Time;
+        printOut("Speed = " + Speed + " km/h");
+        printOut("Distance = " + resultat + " km");
+        printOut("Time = " + Time + " h" + newLine);
+        return resultat;
+    }
+    if (Time === undefined) { // beregne time
+        resultat = Distance/Speed;
+        printOut("Speed = " + Speed + " km/h");
+        printOut("Distance = " + Distance + " km");
+        printOut("Time = " + resultat.toFixed(2) + " h" + newLine);
+        return resultat;
+    }
+
+    return NaN;  //returner NaN for alt annet
+}
+
+SDT(undefined, 35, 0.5);
+SDT(90, undefined, 2);
+SDT(70, 40, undefined);
+SDT(undefined, 80, undefined);
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+function Part8(text, maxLength, character, add){ //funksjon med 4 parametere
+
+printOut("Original tekst: " + text); //printer ut text fra parameter
+
+if (text.length < maxLength) { //hvis lengden på teksten er mindre enn maxx lengde gjør dette:
+    const mangler = maxLength - text.length; //regner ut differeansern mellom tekst lengde og max lengde
+    const fyll = character.repeat(mangler); //konstant som skal brukes til å fylle differansen med character. 
+
+
+if (add === true) { //hvis add = true så kommer fyll etter teksten
+    text = text + fyll;
+} else {
+    text = fyll + text; //hvis add = false så kommer fyll før teksten
+}
+}
+
+printOut("Ny text: " + text); //printer ut den nye teksten
+return text;
+
+}
+
+Part8("How are you?", 30, "*", false);
+
+
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+function sumFromTo(start, end) {
+    let sum = 0;
+    for (let i = start; i <= end; i++){
+        sum = sum + i;
+    }
+
+    return sum;
+}
+
+function test(){
+    let current = 1;
+    
+    for (let line = 1; line <= 200; line++) {
+
+        const leftCount = line + 1; // Antall tall på venstre side
+        const rightCount = line; //Antall tall på høyre side. Det samme som linjetallet
+
+        //Finner tallene på venstre side:
+        const leftStart = current; //finner første tall på venstre side. 
+        const leftEnd = current + leftCount - 1; //finner siste tallet på venstre side. starttall + antall tall på venstre side - 1
+        const leftSum = sumFromTo(leftStart, leftEnd); //Kaller sumFromTo for å få summen til venstre side
+
+        const rightStart = leftEnd + 1; //finner første tall til høyre side = slutt tall på venstre side + 1
+        const rightEnd = rightStart + rightCount - 1; //finner siste tall til høyre. Starttall + antall tall på høyre side - 1
+        const rightSum = sumFromTo(rightStart, rightEnd); //regner summen på høyre side
+
+        if (leftSum !== rightSum) { //Sjekker om uttrykkene stemmer. Venstre=Høyre
+            printOut(
+                "Feil på linje " + line +
+                ": " + leftSum + " ≠ " + rightSum
+            );
+            return;
+        }
+
+        // flytt videre til neste tall. Første tall på venstre side = current, som blir en større enn rightend
+        current = rightEnd + 1;
+    }
+    printOut("Maths fun!");
+}
+
+test();
+
 printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+function factorial(n) { //funksjon som regner ut fakultet
+
+    if (n === 0 || n === 1) {  //Denne if-en får funksjonen til å stoppe når n=0 eller n=1 fordi 1!=1 og 0!=1
+        return 1;
+    }
+
+    return n * factorial(n - 1); //Dette regnestykke baserer seg på: n! = n × (n − 1)!
+}                                // Funksjonen kaller til seg selv. Når n=4 så får vi factorial(3) 
+                                //Fungerer slik: factorial(4) -> 4 * factorial(3), factorial(3) -> 3 * factorial(2), factorial(2) -> 2 * factorial(1), factorial(1) -> return 1
+
+const result = factorial(9);
+printOut("Factorial of 9 = " + result);
+
 printOut(newLine);
