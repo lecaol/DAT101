@@ -155,7 +155,33 @@ printOut("--- Part 8 -----------------------------------------------------------
 
 // 3 pairs
 
-printOut("Replace this with you answer!");
+let pairThrows = 0;
+
+while (true) {
+  pairThrows++;
+
+  const dice = [
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1
+  ].sort();
+
+  if (
+    dice[0] === dice[1] &&
+    dice[2] === dice[3] &&
+    dice[4] === dice[5]
+  ) {
+    printOut(dice.join(","));
+    printOut("3 par");
+    printOut("På " + pairThrows + " kast!");
+    break;
+  }
+}
+
+
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
@@ -163,7 +189,32 @@ printOut("--- Part 9 -----------------------------------------------------------
 
 // 2 of a kind and 4 of a kind (tower)
 
-printOut("Replace this with you answer!");
+let towerThrows = 0;
+
+while (true) {
+  towerThrows++;
+
+  const dice = [
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1
+  ].sort();
+
+  const case1 = dice[0] === dice[3] && dice[4] === dice[5];
+  const case2 = dice[0] === dice[1] && dice[2] === dice[5];
+
+  if (case1 || case2) {
+    printOut(dice.join(","));
+    printOut("Tårn");
+    printOut("På " + towerThrows + " kast!");
+    break;
+  }
+}
+
+
 printOut(newLine);
 
 /* Task 10*/
@@ -172,5 +223,35 @@ printOut("--- Part 10 ----------------------------------------------------------
 
 //All the same
 
-printOut("Replace this with you answer!");
+let yatzeeThrows = 0;
+
+while (true) {
+  yatzeeThrows++;
+
+  const dice = [
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1,
+    Math.floor(Math.random() * 6) + 1
+  ];
+
+  let isYatzee = true;
+
+  for (let index = 0; index < dice.length; index++) {
+    if (dice[index] !== dice[0]) {
+      isYatzee = false;
+    }
+  }
+
+  if (isYatzee) {
+    printOut(dice.join(","));
+    printOut("Yatzi");
+    printOut("På " + yatzeeThrows + " kast!");
+    break;
+  }
+}
+
+
 printOut(newLine);
