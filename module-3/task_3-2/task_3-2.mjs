@@ -282,7 +282,7 @@ while (true) {
 
   let isYatzee = true;
 
-  // Sjekker om alle terninger er like
+  // Sjekker om alle terninger er like:
   for (let index = 0; index < dice.length; index++) {
 
     // Hvis én av terningene ikke har samme verdi som den første = false
