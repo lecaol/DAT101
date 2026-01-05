@@ -10,8 +10,36 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[What is the difference between invoking and creating a function?]</li>
+      <p>[Når en funksjon blir opprettet, er den bare definert og ikke kjørt. Den er lagret i minnet men ingenting annet. Når man kaller (invoke)
+        funksjonen ber man programmet om å kjøre den. En funksjon opprettes en gang, men kan kalles flere ganger.<br>
+        function Hils(){<br>
+        console.log("Hei")<br>
+        }<br>
+        hils()<br>
+        Når man skriver "hils()" kaller man funksjonen og den kjøres.<br>
+        Kilde: https://stackoverflow.com/questions/50884893/calling-vs-invoking-a-function  ]</p>
+            <li>[Explain the syntax regarding semicolons and code blocks.]</li>
+      <p>[Semikolon ";" brukes for å avslutte hver enkelt instruksjon. Kodeblokker "{}" brukes for å gruppere flere instruksjoner som hører sammen. 
+        Kodeblokkene brukes til for eksempel funksjoner og løkker. <br>
+        Kilde: https://www.geeksforgeeks.org/javascript/semicolon-in-javascript/ og https://www.w3schools.com/js/js_codeblocks.asp]</p>
+            <li>[What happens when we try to store values from a function when it doesn't return any?]</li>
+      <p>[Alle funksjoner i javascript returnerer noe. Om return brukes returneres verdien. Hvis ikke return brukes vil "undefined" returneres.
+        Return sender data tilbake til der funksjonen ble kalt. Hvis ikke return brukes vil "undefined" returneres. Kilde: ChatGPT]</p>
+            <li>[How do we separate parameters from each other when creating a function?]</li>
+      <p>[Parameterne separeres med komma. For eksempel: function myFunction(param1, param2) { ... } Kilde: https://www.w3schools.com/js/js_function_parameters.asp]</p>
+            <li>[Explain how parameter names are related during the invocation and creation of a function.]</li>
+      <p>[Når vi oppretter en funksjon gir vi parameterne navn. Når vi kaller funksjonen sender vi inn verdier (argumenter) som matcher disse parameterne.
+         Navnene på parameterne er bare lokale navn i funksjonen og har ingen betydning utenfor den. Det er rekkefølgen man skriver argumentene i som
+         betyr noe for resultatet. Kilde: https://www.w3schools.com/js/js_function_parameters.asp]</p>
+            <li>[Explain why a parameter is undefined when a function call is missing a parameter]</li>
+      <p>[Dette skjer fordi parameteren ikke har en verdi. Når man kaller funksjonen uten å sende inn argumenter for alle parametere, vil de være undefined. 
+        Kilde: https://www.w3schools.com/js/js_function_parameters.asp og chatgpt]</p>
+            <li>[Explain what happens when we use recursive functions.]</li>
+      <p>[En rekursiv funksjon kaller seg selv og løser problemer ved å dele dem opp i mindre deler. 
+        Den har en "base case" som stopper rekursjonen og en rekursiv case som kaller funksjonen på nytt. Hvert nye kall nærmer seg base case. 
+        Hvis ikke man har en base case vil funksjonen kalle seg selv uendelig og føre til en stack overflow. Et eksempel på en base case
+        er en "if" som returnerer en endelig verdi når funksjonen har regnet seg til den verdien. Kilde: Chatgpt.]</p>
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>

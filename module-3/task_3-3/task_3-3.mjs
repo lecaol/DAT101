@@ -304,4 +304,4 @@ function factorial(n) { //funksjon som regner ut fakultet
 const result = factorial(9);
 printOut("Factorial of 9 = " + result);
 
-printOut(newLine);
+printOut(newLine); 
