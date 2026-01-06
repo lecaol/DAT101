@@ -46,10 +46,12 @@
     //Global variables
     const cvs = document.getElementById("cvs");
     const ctx = cvs.getContext("2d");
-    const spcvs = new TSpriteCanvas(cvs); //spcvs: forkorrtelse for sprite canvas
+    const spcvs = new TSpriteCanvas(cvs); //spcvs: forkortelse for sprite canvas
     const hero = new TSprite(spcvs, SpriteInfoList.sonic2, 0, 100); //spcvs parameter forteller at sprite skal tegnes i dette canvaset + henter sprite info fra listen + koordinater hvor sonic skal dukke opp
     const hero2 = new TSprite(spcvs, SpriteInfoList.sonic4, 0, 250); //En annen sprite for å vise at flere sprites kan brukes samtidig
-    
+    const hero4 = new TSprite(spcvs, SpriteInfoList.sonic5, 500, 250);
+
+
     //Functions
 
     //GPU-en kjører animasjonen
@@ -62,6 +64,7 @@
 
     hero.draw(); //Tegner helten
     hero2.draw(); //Tegner den andre helten
+    hero4.draw();
   }
 
   let direction = 1; //1 betyr at sonic beveger seg mot høyre, -1 betyr at han beveger seg mot venstre
@@ -95,10 +98,29 @@
       //Starter animasjonen
       setInterval(animate, 20); //Kaller animate funksjonen hvert 20. millisekund
       hero2.animationSpeed = 30;
-      
+    
     }
+
+    function onKeyDown(aEvent) {
+      switch(aEvent.code){
+        case "ArrowUp":
+        hero4.y -= 5;
+          break;
+        case "ArrowRight":
+          hero4.x += 5;
+          break;
+        case "ArrowDown":
+          hero4.y += 5
+          break;
+        case "ArrowLeft":
+          hero4.x -= 5;
+          break;
+      }
+    }
+
     //Main application
     spcvs.loadSpriteImage("sonic_sprite_sheet.png", sheetLoaded);
+    document.addEventListener("keydown", onKeyDown);
 
 
   </script>
