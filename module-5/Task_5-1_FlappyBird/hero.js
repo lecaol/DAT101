@@ -7,7 +7,7 @@ export class THero extends TSprite{
 #speed;
     constructor(aSpcvs, aSPI) {
         super(aSpcvs, aSPI, 100, 200)
-        this.animationSpeed = 10;
+        this.animationSpeed = 20;
         this.#gravity = 9.81 / 100; 
         this.#speed = 0;
     }
@@ -23,6 +23,7 @@ export class THero extends TSprite{
     } //End of animate
 
     flap(){
-        this.#speed = -5;
+        this.#speed = -3.5;
+        this.rotation = 0;
     }
 }
