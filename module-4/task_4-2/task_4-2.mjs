@@ -307,7 +307,7 @@ for (let r = 0; r < table.length; r++) {
 
   // Printer én og én rad (så det blir tydelig rader/kolonner)
   printOut(line);
-}
+} 
 
 
 printOut(newLine);

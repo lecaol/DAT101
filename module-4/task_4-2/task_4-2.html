@@ -10,8 +10,47 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[What is an array?]</li>
+      <p>[En array er en liste med elementer som kan være av forskjellige typer. Hvert element i listen har en indeks som starter fra 0 og går opp til lengden av arrayen minus 1. <br> 
+        Kilde: https://www.w3schools.com/programming/prog_arrays.php ]</p>
+            <li>[What does it mean to "hard code" when we talk about programming?]</li>
+      <p>[Å "hard code" betyr å skrive faste verdier direkte inn i kildekoden i stedet for å hente verdiene fra andre databaser. <br> 
+              For eksempel: Hvis vi hardkoder const SkatteProsent = 0.25; <br> 
+              Om skatteprosenten endres må vi manuelt gå inn og endre den for hver gang i stedet for at den automatisk oppdateres fra en database. <br> 
+              Kilde: https://en.wikipedia.org/wiki/Hard_coding  ]</p>
+            <li>[Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we (humans) don't "know" how long the array is.]</li>
+      <p>[Først lager vi en konstant som inneholder setningen. Deretter deler vi denne teksten opp i enkeltord og lagrer dem i et array. Hvert element i arrayet inneholder altså ett ord fra teksten. <br> 
+        Videre bruker vi en "for"-løkke som går gjennom ordene en etter en. Slik traverserer man arrayet. For hvert element i arrayet skriver vi ut ordnummeret, indeksen og selve ordet. ]</p>
+          <li>[Why is it beneficial to store instances of a class in arrays, as in task 4?]</li>
+  <p>[Det er lurt å lagre instanser av en klasse i et array fordi det gir en strukturert, fleksibel og skalerbar måte å håndtere mange objekter på samtidig. <br> 
+    Når vi har mange elementer, er det upraktisk å håndtere hvert enkelt element separat. Ved å samle dem i et array kan vi behandle dem som én gruppe, i stedet for mange enkeltvariabler <br> 
+    Iterasjon blir også enklere fordi vi kan bruke løkker for å gå gjennom alle objektene i arrayet. I task 4 kan funksjonen brukes flere ganger på ulike arrayer fordi listen med navn er lagt i sin egen array <br> 
+    og ikke direkte i funksjonen. Slik kan vi lettere gjenbruke kode til andre formål. <br> 
+    Kilde: ChatGPT og egne refleksjoner ]</p>
+    <li>[Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? <br> 
+      If we wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and "Thursday", how would it ideally look?]</li>
+  <p>[EWeekDays er et statisk objekt som fungerer som et oppslagsverk for ukedager og grupper av ukedager. Hvert element består av en value/tall og et navn. <br> 
+    Value attributet bruker hex-tall for å gi ukedagene unike verdier. "Value" kan i praksis brukes til å representere flere ukedager i en variabel eller sjekke om en bestemt ukedag er en del av en gruppe. <br> 
+    WeekDay representerer hver enkelt ukedag og deres verdier. Workdays representerer hverdager (mandag til fredag) og deres kombinerte verdi, mens Weekends representerer helgedager (lørdag og søndag) og deres kombinerte verdi. <br>
+    Hvis vi skulle lage et nytt element "WorkoutDays" som inneholder "Monday", "Wednesday", og "Thursday", kunne det se slik ut: <br>
+    WorkoutDays: { value: 0x01 + 0x04 + 0x08, name: "Workout Days" } <br>
+    Her er verdien 0x0D valgt fordi den representerer en kombinasjon av de tre ukedagene akkurat som i Workdays og Weekends. <br>
+    Kilde: ChatGPT og egne refleksjoner ]</p>
+    <li>[In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.]</li>
+  <p>[En callback-funksjon er en funksjon som sendes som argument til en annen funksjon, og som blir kalt (“ringt tilbake”) av den funksjonen når den trenger hjelp til å utføre en bestemt oppgave. <br> 
+    I task 8 sender vi en callback til .sort()-metoden for å fortelle hvordan tallene skal sammenlignes. Callbacken .sort fungerer ved at den tar to argumenter (a og b) og returnerer en verdi basert på sammenligningen. <br>
+    Hvis resultatet er negativt, betyr det at a skal sorteres før b. Hvis resultatet er positivt, betyr det at b skal sorteres før a. Hvis resultatet er null, betyr det at a og b er like. <br> 
+    Kilder: https://www.w3schools.com/js/js_callback.asp , https://www.w3schools.com/js/js_array_sort.asp ]</p>
+    <li>[What happens in the sorting routines you have created? Try to explain how the array can figure out if an element should come before or after another. The best way to answer this is to actually print <br> 
+      both parameters each time the sorting routine runs.]</li>
+  <p>[I oppgaven har jeg brukt callbacken: .sort((a, b) => a - b); og .sort((a, b) => b - a);. Funksjonen plukker to tall fra arrayet (a og b) og avgjør om a skal komme før eller etter b. <br> 
+    Om returverdien er negativ, betyr det at a skal sorteres før b. Om returverdien er positiv, betyr det at b skal sorteres før a. Om returverdien er null, betyr det at a og b er like. <br>
+    Når "a-b" brukes får får vi en stigende sortering. Når "b-a" brukes får vi en synkende sortering. ]</p>
+     <li>[In task 10, we will create an array with rows and columns. Explain what the first element of the array contains.]</li>
+  <p>[I oppgave 10 er det første elementet i arrayet (table[0]) et eget array som representerer den første raden i tabellen. Denne raden inneholder alle kolonnene for rad 0, altså 9 elementer. <br> 
+    Hvert element i dette indre arrayet er en tekst som beskriver hvilken rad og kolonne cellen tilhører, for eksempel "Row 0, Col 0". Dette viser at arrayet er todimensjonalt, <br> 
+    der første indeks angir rad og andre indeks angir kolonne. <br> 
+    Kilder ChatGPT og egne refleksjoner.]</p>
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
