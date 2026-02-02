@@ -9,7 +9,7 @@ const AccountType = { //Objekt med kontotyper DEL1
     Saving: "Sparekonto",
     Credit: "Kreditkonto",
     Pension: "Pensionskonto"
-};
+}; 
 
 // Objekt for DEL 5:
 const CurrencyTypes = {
