@@ -337,6 +337,6 @@ cmbAddMovie.addEventListener("click", function () {
   cellGenre.innerText = genre;
   cellDirector.innerText = director;
   cellRate.innerText = rate;
-
+ 
   
 });

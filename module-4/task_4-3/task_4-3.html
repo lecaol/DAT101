@@ -97,8 +97,25 @@
   </div>
 </fieldset>
 <ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <li>[In this assignment, we use the DOM. Explain how this library can help us develop interactive web pages.]</li>
+  <p>[DOM står for Document Object Model og kan beskrives som et "tre" av objekter som representerer HMTL-siden. Dette lar oss endre innholdet og strukturen til nettsider ved hjelp av JavaScript. <br>  
+    DOM gjør at vi kan lage interaktive nettsider ved å "lytte" til brukerhandlinger som klikk og skriving. Det lar oss også oppdatere innholdet dynamisk uten å måtte laste inn hele siden på nytt. <br> 
+    Det er også slik vi kan legge til og/eller fjerne elementer fra nettsiden. <br> 
+    Kilder: https://www.geeksforgeeks.org/javascript/dom-document-object-model/ ]</p>
+    <li>[What is an event? Simply explain what happens when we add an event listener to an object.]</li>
+  <p>[Et event er en handling som skjer i nettleseren, for eksempel musebevegelser eller tastetrykk. Når vi legger til en event listener på et objekt, forteller vi JavaScript at det skal følge med på <br> 
+    en bestemt hendelse på dette objektet. Vi sier "når denne hendelsen skjer her, gjør dette...". <br> 
+    Kilde: https://www.w3schools.com/js/js_htmldom_eventlistener.asp ]</p>
+    <li>[Sometimes we need to use an event object to get data from the event. Explain how this event object is structured, don't explain all functions or attributes. <br> 
+      Try to explain, for example, how to retrieve data from a keyboard or mouse.]</li>
+  <p>[Når en event listener blir trigget, oppretter nettleseren automatisk et event-objekt og sender det inn i callback-funksjonen. Dette objektet inneholder informasjon om selve hendelsen. <br> 
+    Event-objektet er et vanlig JavaScript-objekt med ulike egenskaper, for eksempel: hvilken type event som skjedde (klikk, tastetrykk osv.), hvilket element som utløste eventet og tilleggsdata som avhenger av typen event. <br> 
+    Med event listener kan vi hente data fra muse-hendelser. Da inneholder event-objektet informasjon om hvor og hvordan musa ble brukt, altså musepekerens posisjon (y- og x-verdi) <br> 
+    Hvilken museknapp som ble trykket med og hviklet element som ble trykket på. <br> 
+    Kilder: ChatGPT ]</p>
+    <li>[Explain the main difference between DOM id and DOM name. Can we have identical IDs?]</li>
+  <p>[Et id er ment å være unikt i hele dokumentet og kan bare brukes en gang. Name er ikke unikt og kan brukes flere ganger i samme dokument og brukes gjern i grupperinger. Dette gjør at vi ikke kan ha identiske id-er. <br> 
+    Kilde: https://www.geeksforgeeks.org/html/difference-between-id-and-class-attributes-in-html/ ]</p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
 </body>
