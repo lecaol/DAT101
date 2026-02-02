@@ -37,6 +37,7 @@ export const hero = new THero(spcvs, SpriteInfoList.hero2);
 const obstacles = [];
 const baits = [];
 export const menu = new TMenu(spcvs, SpriteInfoList);
+let obstaclePassed = false;
 
 
 //--------------- Functions ----------------------------------------------//
@@ -90,7 +91,13 @@ function animateGame(){
       obstacle.animate();
       if (obstacle.x < -50){
         deleteObstacle = true;
+        obstaclePassed = false;
+      } else if(obstacle.x + obstacle.width < hero.x){
+        if(!obstaclePassed){
+        menu.incGameScore(1);
+        obstaclePassed = true;
       }
+    }
   }
   if (deleteObstacle){
     obstacles.splice(0,1);
